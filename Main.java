@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 import java.util.Properties;
-
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -10,7 +9,6 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -59,14 +57,14 @@ public class Main extends Application {
 		grid.setHgap(25);
 		scene.setRoot(grid);
 
-		// To Part
+		// "To" Part
 		TextField toadress = new TextField();
 		toadress.setPromptText("To");
 		toadress.setPrefColumnCount(20);
 		GridPane.setConstraints(toadress, 0, 0);
 		grid.getChildren().add(toadress);
 
-		// Subject Part
+		// "Subject" Part
 		TextField subject = new TextField();
 		GridPane.setConstraints(subject, 0, 1);
 		grid.getChildren().add(subject);
@@ -74,7 +72,7 @@ public class Main extends Application {
 		subject.setPrefColumnCount(20);
 		subject.setPrefHeight(20);
 
-		// Body Part
+		// "Body" Part
 		TextArea body = new TextArea();
 		body.setPrefRowCount(10);
 		body.setPrefColumnCount(100);
@@ -132,7 +130,6 @@ public class Main extends Application {
 			}
 		});
 	}
-
 	public static void main(String[] args) {
 		launch(args);
 	}
